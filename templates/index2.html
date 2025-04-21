@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Image Annotator</h1>
+        </div>
+        <button type='button' onclick="oclick()" id='retrieve'>Submit</button>
+     <button onclick="action(2)" type="button">Backward</button><button onclick="action(1)" type="button">Forward</button>
+
+     <image src="" id="myimg"></image>
+    </div>
+</div>
+<script>
+var imgap = 0
+
+function oclick(){
+var getInitialImage = new XMLHttpRequest();
+getInitialImage.open("GET", "/getimage");
+getInitialImage.onreadystatechange = function (){
+if (this.readyState == 4 && this.status == 200){
+document.getElementById("myimg").setAttribute("src", "/image/" + this.responseText);
+}
+}
+getInitialImage.send();
+}
+
+function action(ac){
+if (ac == 1){
+imgap += 1
+var getnextimagedetails = new XMLHttpRequest();
+getnextimagedetails.open("GET", "/getimage?num=" + imgap.toString());
+getnextimagedetails.onreadystatechange = function (){
+if (this.readyState == 4 && this.status == 200){
+document.getElementById("myimg").setAttribute("src", "/image/" + this.responseText);
+}
+}
+getnextimagedetails.send();
+}
+if (ac == 2){
+imgap += -1
+var getlastimagedetails = new XMLHttpRequest();
+getlastimagedetails.open("GET", "/getimage?num=" + imgap.toString());
+getlastimagedetails.onreadystatechange = function (){
+if (this.readyState == 4 && this.status == 200){
+document.getElementById("myimg").setAttribute("src", "/image/" + this.responseText);
+}
+}
+getlastimagedetails.send();
+}
+}
+</script>
+        </body>
+
+</html>

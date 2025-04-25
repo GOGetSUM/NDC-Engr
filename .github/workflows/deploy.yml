@@ -1,21 +1,23 @@
-name: Deploy to IONOS via FTP
+name: Deploy via SFTP to IONOS
 
 on:
   push:
     branches:
-      - main
+      - masterw
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
 
+      - name: Copy files via SFTP
+        uses: appleboy/scp-action@master
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist # or ./dist for built projects
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          key: ${{ secrets.SFTP_PRIVATE_KEY }}
+          port: ${{ secrets.SFTP_PORT }}
+          source: "."             # assuming you want to deploy the whole repo
+          target: "/var/www/html"

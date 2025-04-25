@@ -18,4 +18,4 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./ # or ./dist for built projects
+          local-dir: ./dist # or ./dist for built projects

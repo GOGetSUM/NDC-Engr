@@ -47,45 +47,98 @@
             <h2>Computer Aided Design</h2>
             <p>Autocad - Drafting Blue Prints</p>
 
-            <style>
-                .image-table {
-                    width: 100%;
-                    border-collapse: separate;
-                    border-spacing: 20px 10px;
-                }
+              <style>
+  .image-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 10px;
+  }
 
-                .image-cell {
-                    width: 50%;
-                    padding: 0;
-                    text-align: center;
-                }
+  .image-cell {
+    width: 50%;
+    padding: 0;
+    text-align: center;
+  }
 
-                .image-cell img {
-                    width: 90%;
-                    border: 2px solid #ccc;
-                    border-radius: 8px;
-                    padding: 5px;
-                }
-            </style>
+  .image-cell img,
+  .image-cell .hover-wrapper {
+    width: 90%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
 
+  .hover-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .hover-wrapper img,
+  .hover-wrapper iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  .hover-wrapper .gif,
+  .hover-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .hover-wrapper:hover .static {
+    opacity: 0;
+  }
+
+  .hover-wrapper:hover .gif,
+  .hover-wrapper:hover iframe {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
             <table class="image-table">
-                <tr>
-                    <td class="image-cell">
-                        <a href="{{ url_for('static', filename='images/01-Blue Prints.pdf') }}" target="_blank">
-                            <img src="{{ url_for('static', filename='images/Port01.jpg') }}" alt="Image 1">
-                        </a>
-                    </td>
-                    <td class="image-cell">
-                        <a href="{{ url_for('static', filename='images/02-Blue Prints.pdf') }}" target="_blank">
-                            <img src="{{ url_for('static', filename='images/Port02.jpg') }}" alt="Image 2">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="image-cell"><img src="https://via.placeholder.com/150" alt="Image 3"></td>
-                    <td class="image-cell"><img src="https://via.placeholder.com/150" alt="Image 4"></td>
-                </tr>
-            </table>
+  <tr>
+    <!-- Regular PDF-linked images -->
+    <td class="image-cell">
+      <a href="{{ url_for('static', filename='images/01-Blue Prints.pdf') }}" target="_blank">
+        <img src="{{ url_for('static', filename='images/Port01.jpg') }}" alt="Image 1">
+      </a>
+    </td>
+    <td class="image-cell">
+      <a href="{{ url_for('static', filename='images/02-Blue Prints.pdf') }}" target="_blank">
+        <img src="{{ url_for('static', filename='images/Port02.jpg') }}" alt="Image 2">
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <!-- GIF Hover -->
+    <td class="image-cell">
+      <div class="hover-wrapper">
+        <img class="static" src="https://via.placeholder.com/300" alt="Static">
+        <img class="gif" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="GIF">
+      </div>
+    </td>
+
+    <!-- YouTube Hover -->
+    <td class="image-cell">
+      <div class="hover-wrapper">
+        <img class="static" src="https://via.placeholder.com/300" alt="Preview">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=0&loop=1&playlist=dQw4w9WgXcQ"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+        </iframe>
+      </div>
+    </td>
+  </tr>
+</table>
 
             <h3>Library of All Work</h3>
             <ul class="icons">

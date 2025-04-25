@@ -1,22 +1,17 @@
 name: Deploy via SFTP to IONOS
-name: Deploy via SFTP to IONOS
 
 on:
   push:
     branches:
-      - masterw
+      - main
 
 jobs:
-  deploy:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Copy files via SFTP
-        uses: appleboy/scp-action@master
       - name: Copy files via SFTP
         uses: appleboy/scp-action@master
         with:

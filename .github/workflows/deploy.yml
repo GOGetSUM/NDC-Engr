@@ -3,7 +3,7 @@ name: Deploy via SFTP to IONOS
 on:
   push:
     branches:
-      - main
+      - masterw
 
 jobs:
   deploy:

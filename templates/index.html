@@ -1,293 +1,150 @@
 <!DOCTYPE HTML>
 <link rel="icon" type="image/x-icon" href="static/images/faviconNCD.ico" />
+<!-- Link your stylesheets -->
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome-all.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}">
+
+
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Portfolio - N.D.Corona Engineering Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="static/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Portfolio - N.D.Corona Engineering Services</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+</head>
+<body class="is-preload">
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Portfolio</a></li>
-							<li><a href="#three">Contact Me</a></li>
-						</ul>
-
-					</nav>
-				</div>
-			</section>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<a href="#"> <img  style="width:75%; border-radius:30%" src="static/images/NDC.jpg" alt="" data-position="center center" /></a>
-
-						</div>
-
-					</section>
-
-				<!-- Two -->
-<!--					<section id="two" class="wrapper style3 fade-up">-->
-<!--						<div class="inner">-->
-<!--							<h2>Who I Am.</h2>-->
-<!--							<p>I am an Engineer born and raised in my town Long Beach, California.-->
-<!--								I am always eager to explore new challenges and opportunities where I can help design & implement new designs and solutions within various industries.-->
-<!--								My best assets as an individual are my ingenuity, persistence and positive-open minded outlook at life and its challenges.-->
-<!--								If you would like to view a copy of my CV please click, <a href="{{ url_for('static', filename='NDCorona_Resume.pdf')}}" style="color:#30CD17">CV Resume.pdf</a></p>-->
-
-<!--							<ul class="actions">-->
-<!--								<section>-->
-
-<!--								</section>-->
-<!--								<li><a href="#one" class="button">Portfolio</a></li>-->
-<!--								<li><a href="https://www.linkedin.com/in/nicolas-daniel-corona/" class="button">LinkedIn Profile</a></li>-->
-<!--								<li><a href="{{ url_for('static', filename='NDCorona_Resume.pdf')}}" class="button">CV</a></li>-->
-<!--								<li><a href="{{ url_for('certs')}}" class="button">Certifications</a></li>-->
-<!--							</ul>-->
-<!--						</div>-->
-<!--					</section>-->
-
-					<section id="one" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2> Computer Aided Design</h2>
-							<p>Autocad - Drafting Blue Prints</p>
-								<style>
-  .image-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 20px 10px; /* 20px horizontal, 10px vertical */
-  }
-
-  .image-cell {
-    width: 50%;
-    padding: 0;
-    text-align: center;
-  }
-
-  .image-cell img {
-    width: 90%;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    padding: 5px;
-  }
-</style>
-
-<table class="image-table">
-  <tr>
-    <td  class="image-cell"><a href="static/images/01-Blue Prints.pdf" target="_blank"><img src="static/images/Port01.jpg" alt="Image 1"></td></a>
-    <td class="image-cell"><a href="static/images/02-Blue Prints.pdf" target="_blank"><img src="static/images/Port02.jpg" alt="Image 1"></td></a>
-  </tr>
-  <tr>
-    <td class="image-cell"><img src="https://via.placeholder.com/150" alt="Image 3"></td>
-    <td class="image-cell"><img src="https://via.placeholder.com/150" alt="Image 4"></td>
-  </tr>
-</table>
-											<h3>Library of All Work</h3>
-											<ul class="icons">
-												<li><a href="https://github.com/GOGetSUM/CAD-Drafting-Portfolio" class="icon brands fa-github"><span class="label">GitHub</span> Github - Library Link</a></li>
-											</ul>
-
-
-<!--							<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;<a>  Back</a></button>-->
-<!--							<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;<a>  Forward</a></button>-->
-
-<!--							<img class="mySlides" style="width:85%" src="static/images02/CAD01.jpg">-->
-<!--							<img class="mySlides" style="width:85%" src="static/images02/CAD02.jpg">-->
-<!--							<img class="mySlides" style="width:85%" src="static/images02/CAD03.jpg">-->
-<!--							<img class="mySlides" style="width:85%" src="static/images02/CAD04.jpg">-->
-<!--							<img class="mySlides" style="width:85%" src="static/images02/CAD05.jpg">-->
-<!--							<img class="mySlides" style="width:85%" src="static/images02/CAD06.jpg">-->
-<!--							<img class="mySlides" style="width:85%" src="static/images02/CAD07.jpg">-->
-<!--							<img class="mySlides" style="width:85%" src="static/images02/CAD08.jpg">-->
-<!--							<img class="mySlides" style="width:85%" src="static/images02/CAD09.jpg">-->
-
-
-<!--							<script>-->
-
-<!--								var slideIndex = 1;-->
-<!--								showDivs(slideIndex);-->
-
-<!--								function plusDivs(n) {-->
-<!--								  showDivs(slideIndex += n);-->
-<!--								}-->
-
-<!--								function showDivs(n) {-->
-<!--								  var i;-->
-<!--								  var x = document.getElementsByClassName("mySlides");-->
-<!--								  if (n > x.length) {slideIndex = 1}-->
-<!--								  if (n < 1) {slideIndex = x.length} ;-->
-<!--								  for (i = 0; i < x.length; i++) {-->
-<!--									x[i].style.display = "none";-->
-<!--								  }-->
-<!--								  x[slideIndex-1].style.display = "block";-->
-<!--								}-->
-<!--&lt;!&ndash;							</script>&ndash;&gt;-->
-<!--							<head>-->
-<!--  							<title>Video Example</title>-->
-<!--							</head>-->
-<!--							<body>-->
-<!--							<br>-->
-<!--							  <h3>Work Experience</h3>-->
-<!--							<br>-->
-<!--							  <p>  Throughout my tenure in manufacturing, I undertook two trips to Taiwan to conduct validation of an innovative forging process,-->
-<!--							 thereby contributing to the companies manufacturing and operational refinement.</p>-->
-<!--							  <video width="35%" height="26%" controls>-->
-<!--								<source src={{ url_for('static', filename="November 14 - 2018.mov") }} type="video/mp4" -  - >-->
-<!--								Your browser does not support the video tag.-->
-<!--							  </video>-->
-
-<!--						</div>-->
-
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
+            <ul>
+                <li><a href="#intro">Welcome</a></li>
+                <li><a href="#one">Portfolio</a></li>
+                <li><a href="#three">Contact Me</a></li>
+            </ul>
+        </nav>
+    </div>
 </section>
 
+<!-- Wrapper -->
+<div id="wrapper">
 
+    <!-- Intro -->
+    <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+            <a href="#">
+                <img style="width:75%; border-radius:30%" src="{{ url_for('static', filename='images/NDC.jpg') }}" alt="" data-position="center center" />
+            </a>
+        </div>
+    </section>
 
-				<!-- One -->
-<!--					<section id="one" class="wrapper style2 spotlights">-->
-<!--						<title>Portfolio</title>-->
-<!--						<section id="Update">-->
-<!--							<a href="#" class="image"><img src="static/images/Process.jpg" alt="" data-position="center center" /></a>-->
-<!--							<div class="content">-->
-<!--								<div class="inner">-->
-<!--									<h1>Portfolio</h1>-->
-<!--									<p>This section is meant to showcase my coding and developement skills, while also tracking my progression along the way.<br></p>-->
-<!--									<p>This projects are section of by python skill and color code to track my coding developement overtime with the completion of new milestones in journey.</p>-->
-<!--									<h3>Project Color Code:</h3>-->
-<!--									<ul style="list-style:none; color:white;">-->
-<!--										<li>White - The Complete Python Pro Bootcamp (64 hour course) - D.O.C. 5/20/2022-->
-<!--										<ul style="color:#ACADD6">-->
-<!--											<li>10 Project - Full Python Development scope.</li>-->
-<!--										</ul></li>-->
-<!--										<li style="color:orange">Orange - Advance Res APIs with Flask and Python (12.5 hour course) -D.O.C. 6/15/2022-->
-<!--										<ul style="color:#ACADD6">-->
-<!--											<li>3 Projects - RESTFUL APIs, Postman, Python Automation-->
+    <section id="one" class="wrapper style3 fade-up">
+        <div class="inner">
+            <h2>Computer Aided Design</h2>
+            <p>Autocad - Drafting Blue Prints</p>
 
-<!--										</ul></li>-->
-<!--									</ul>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</section>-->
-<!--						<section id="https">-->
-<!--							<a href="#" class="image"><img src="static/images/pic04.png" alt="" data-position="center center" /></a>-->
-<!--							<div class="content">-->
-<!--								<div class="inner">-->
-<!--									<h2>HTTP/APIs/Web Scraping</h2>-->
-<!--									<p>Projects:</p>-->
-<!--									<ul style="list-style:none;">-->
-<!--										<li ><a href={{url_for('onlineshopv2')}} class="button" >Online Shop  v2 - API endpoints</a><a style="color:orange"> - Orange Project </a> </li>-->
-<!--										<li ><a href={{url_for('AGM')}} class="button" >Automated Garden Mister </a><a style="color:orange"> - Orange Project </a> </li>-->
-<!--										<li><a href={{url_for('pdftoaudio')}}  class="button">PDF to Audio (HTTPS-AWS)</a></li>-->
-<!--										<li><a href={{url_for('wscrapper')}}  class="button">Custom Web Scraper</a></li>-->
-<!--									</ul>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</section>-->
-<!--						<section id="webdev">-->
-<!--							<a href="#" class="image"><img src="static/images/pic03.png" alt="" data-position="center center" /></a>-->
-<!--							<div class="content">-->
-<!--								<div class="inner">-->
-<!--									<h2>Back End/Web Developement</h2>-->
-<!--									<p>Projects:</p>-->
-<!--									<ul style="list-style:none;">-->
-<!--										<li><a href={{url_for('tasktracker')}} class="button">Task Tracker Webb App</a></li>-->
-<!--										<li><a href={{url_for('colourpallette')}} class="button">Colour Palette Generator</a></li>-->
-<!--										<li><a href={{url_for('onlineshop')}} class="button">Online Shop</a></li>-->
-<!--									</ul>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</section>-->
-<!--						<section id="gui">-->
-<!--							<a href="#" class="image"><img src="static/images/pic02.png" alt="" data-position="center center" /></a>-->
-<!--							<div class="content">-->
-<!--								<div class="inner">-->
-<!--									<h2>Graphical User Interface (GUI)</h2>-->
-<!--									<p>Projects:</p>-->
-<!--									<ul style="list-style:none;">-->
-<!--										<li ><a class="button"> Python Interview Questions, Review</a><a style="color:orange"> - Orange Project </a> </li>-->
-<!--										<li><a href={{url_for('watermark')}} class="button">Watermarking Desktop App</a></li>-->
-<!--										<li><a href={{url_for('typingspeed')}} class="button">Typing Speed App</a></li>-->
-<!--										<li><a href={{url_for('writersblock')}} class="button">Writer's Block App</a></li>-->
-<!--									</ul>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</section>-->
-<!--						<section id="pyscrp">-->
-<!--							<a href={{url_for('text2mrse')}} class="image"><img src="static/images/pic01.jpg" alt="" data-position="center center" /></a>-->
-<!--							<div class="content">-->
-<!--								<div class="inner">-->
-<!--									<h2>Python Scripting</h2>-->
-<!--									<p>Projects:</p>-->
-<!--									<ul style="list-style:none;">-->
-<!--										<li><a href={{url_for('text2mrse')}}  class="button">Text to Morse Code Converter</a></li>-->
-<!--										<li><a href={{url_for('tictactoe')}}  class="button">Tic Tac Toe</a></li>-->
-<!--									</ul>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</section>-->
-<!--					</section>-->
+            <style>
+                .image-table {
+                    width: 100%;
+                    border-collapse: separate;
+                    border-spacing: 20px 10px;
+                }
 
+                .image-cell {
+                    width: 50%;
+                    padding: 0;
+                    text-align: center;
+                }
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<div class="split style1">
-<!--								<section>-->
-<!--									<p>If you are interested in working together, please feel free to contact me.</p>-->
-<!--									<a href="#"> <img  style="width:75%; border-radius:30%" src="static/images/peak02.jpg" alt="" data-position="center center" /></a>-->
-<!--								</section>-->
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Email</h3>
-											<a>Nick.D.Corona@gmail.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(562)-505-7286</span>
-										</li>
-										<li>
-											<h3>Links</h3>
-											<ul class="icons">
-												<li><a href="https://github.com/GOGetSUM" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="https://www.linkedin.com/in/nicolas-daniel-corona/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+                .image-cell img {
+                    width: 90%;
+                    border: 2px solid #ccc;
+                    border-radius: 8px;
+                    padding: 5px;
+                }
+            </style>
 
-			</div>
+            <table class="image-table">
+                <tr>
+                    <td class="image-cell">
+                        <a href="{{ url_for('static', filename='images/01-Blue Prints.pdf') }}" target="_blank">
+                            <img src="{{ url_for('static', filename='images/Port01.jpg') }}" alt="Image 1">
+                        </a>
+                    </td>
+                    <td class="image-cell">
+                        <a href="{{ url_for('static', filename='images/02-Blue Prints.pdf') }}" target="_blank">
+                            <img src="{{ url_for('static', filename='images/Port02.jpg') }}" alt="Image 2">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="image-cell"><img src="https://via.placeholder.com/150" alt="Image 3"></td>
+                    <td class="image-cell"><img src="https://via.placeholder.com/150" alt="Image 4"></td>
+                </tr>
+            </table>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy;NDC - GoGetSum All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+            <h3>Library of All Work</h3>
+            <ul class="icons">
+                <li>
+                    <a href="https://github.com/GOGetSUM/CAD-Drafting-Portfolio" class="icon brands fa-github">
+                        <span class="label">GitHub</span> Github - Library Link
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-		<!-- Scripts -->
-			<script src="static/assets/js/jquery.min.js"></script>
-			<script src="static/assets/js/jquery.scrollex.min.js"></script>
-			<script src="static/assets/js/jquery.scrolly.min.js"></script>
-			<script src="static/assets/js/browser.min.js"></script>
-			<script src="static/assets/js/breakpoints.min.js"></script>
-			<script src="static/assets/js/util.js"></script>
-			<script src="static/assets/js/main.js"></script>
+    <!-- Contact Section -->
+    <section id="three" class="wrapper style1 fade-up">
+        <div class="inner">
+            <h2>Get in touch</h2>
+            <div class="split style1">
+                <section>
+                    <ul class="contact">
+                        <li>
+                            <h3>Email</h3>
+                            <a>Nick.D.Corona@gmail.com</a>
+                        </li>
+                        <li>
+                            <h3>Phone</h3>
+                            <span>(562)-505-7286</span>
+                        </li>
+                        <li>
+                            <h3>Links</h3>
+                            <ul class="icons">
+                                <li><a href="https://github.com/GOGetSUM" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                <li><a href="https://www.linkedin.com/in/nicolas-daniel-corona/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+</div>
 
-	</body>
+<!-- Footer -->
+<footer id="footer" class="wrapper style1-alt">
+    <div class="inner">
+        <ul class="menu">
+            <li>&copy;NDC - GoGetSum All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
 </html>

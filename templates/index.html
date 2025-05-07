@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<link rel="icon" type="image/x-icon" href="static/images/faviconNCD.ico" />
+<link rel="icon" type="image/x-icon" href="static/images/faviconNCD.ico" xmlns="http://www.w3.org/1999/html"/>
 <!-- Link your stylesheets -->
 <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome-all.min.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
@@ -101,6 +101,12 @@
     opacity: 1;
     pointer-events: auto;
   }
+                    .caption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #333;
+  text-align: center;
+}
 </style>
             <table class="image-table">
   <tr>
@@ -118,18 +124,23 @@
           <div class="caption"> Residential Dwelling Building </div>
     </td>
   </tr>
-                <tr>
-    <td class="image-cell">
-      <a href="{{ url_for('static', filename='images/02-Blue Prints.pdf') }}" target="_blank">
-        <img src="{{ url_for('static', filename='images/Port02.jpg') }}" alt="Image 2">
-      </a>
-        <div class="caption"> Masonry Cinder Block Wall </div>
-    </td>
-  </tr>
+<tr>
+  <td class="image-cell">
+    <a href="{{ url_for('static', filename='images/02-Blue Prints.pdf') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/Port02.jpg') }}" alt="Image 2">
+    </a>
+    <div class="caption"> Masonry Cinder Block Wall </div>
+  </td>
+  <td class="image-cell">
+    <!-- Optional: leave empty or add a placeholder -->
+  </td>
+</tr>
     </section>
-             <section id="one" class="wrapper style3 fade-up">
+    </table>
+
+
+    <section id="one" class="wrapper style3 fade-up">
         <div class="inner">
-            <p>Prints for Manufacturing - Prints for products intent to manufacture.</p>
 
               <style>
   .image-table {
@@ -200,7 +211,7 @@
       <a href="{{ url_for('static', filename='images/MP-01-SASQUATCH STOOL - PRINTS.pdf') }}" target="_blank">
         <img src="{{ url_for('static', filename='images/MFGPort01.jpg') }}" alt="Image 1">
       </a>
-        <div class="caption">Sasquatch Stool PDF</div>
+        <div class="caption">Sasquatch Stool</div>
     </td>
     <td class="image-cell">
       <a href="{{ url_for('static', filename='') }}" target="_blank">

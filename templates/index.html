@@ -109,41 +109,23 @@
       <a href="{{ url_for('static', filename='images/03-Blue Prints.pdf') }}" target="_blank">
         <img src="{{ url_for('static', filename='images/Port03.jpg') }}" alt="Image 1">
       </a>
+            <div class="caption">Wooden Frame Gazebo</div>
     </td>
     <td class="image-cell">
       <a href="{{ url_for('static', filename='images/01-Blue Prints.pdf') }}" target="_blank">
         <img src="{{ url_for('static', filename='images/Port01.jpg') }}" alt="Image 1">
       </a>
+          <div class="caption"> Residential Dwelling Building </div>
     </td>
+  </tr>
+                <tr>
     <td class="image-cell">
       <a href="{{ url_for('static', filename='images/02-Blue Prints.pdf') }}" target="_blank">
         <img src="{{ url_for('static', filename='images/Port02.jpg') }}" alt="Image 2">
       </a>
+        <div class="caption"> Masonry Cinder Block Wall </div>
     </td>
   </tr>
-
-  <tr>
-    <!-- GIF Hover -->
-    <td class="image-cell">
-      <div class="hover-wrapper">
-        <img class="static" src="https://via.placeholder.com/300" alt="Static">
-        <img class="gif" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="GIF">
-      </div>
-    </td>
-
-    <!-- YouTube Hover -->
-    <td class="image-cell">
-      <div class="hover-wrapper">
-        <img class="static" src="https://via.placeholder.com/300" alt="Preview">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=0&loop=1&playlist=dQw4w9WgXcQ"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen>
-        </iframe>
-      </div>
-    </td>
-  </tr>
-</table>
     </section>
              <section id="one" class="wrapper style3 fade-up">
         <div class="inner">
@@ -203,6 +185,13 @@
     opacity: 1;
     pointer-events: auto;
   }
+  .caption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #333;
+  text-align: center;
+}
+
 </style>
             <table class="image-table">
   <tr>
@@ -211,6 +200,7 @@
       <a href="{{ url_for('static', filename='images/MP-01-SASQUATCH STOOL - PRINTS.pdf') }}" target="_blank">
         <img src="{{ url_for('static', filename='images/MFGPort01.jpg') }}" alt="Image 1">
       </a>
+        <div class="caption">Sasquatch Stool PDF</div>
     </td>
     <td class="image-cell">
       <a href="{{ url_for('static', filename='') }}" target="_blank">
@@ -242,6 +232,7 @@
   </tr>
 </table>
  </section>
+
     <section>
             <h3>Library of All Work</h3>
             <ul class="icons">

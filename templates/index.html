@@ -136,76 +136,8 @@
   </td>
 </tr>
     </section>
-    </table>
 
-
-    <section id="one" class="wrapper style3 fade-up">
-        <div class="inner">
-
-              <style>
-  .image-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 20px 10px;
-  }
-
-  .image-cell {
-    width: 50%;
-    padding: 0;
-    text-align: center;
-  }
-
-  .image-cell img,
-  .image-cell .hover-wrapper {
-    width: 90%;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    padding: 5px;
-    box-sizing: border-box;
-  }
-
-  .hover-wrapper {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-  }
-
-  .hover-wrapper img,
-  .hover-wrapper iframe {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: opacity 0.3s ease;
-  }
-
-  .hover-wrapper .gif,
-  .hover-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .hover-wrapper:hover .static {
-    opacity: 0;
-  }
-
-  .hover-wrapper:hover .gif,
-  .hover-wrapper:hover iframe {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .caption {
-  margin-top: 8px;
-  font-size: 0.9em;
-  color: #333;
-  text-align: center;
-}
-
-</style>
-            <table class="image-table">
-  <tr>
+     <tr>
     <!-- Regular PDF-linked images -->
     <td class="image-cell">
       <a href="{{ url_for('static', filename='images/MP-01-SASQUATCH STOOL - PRINTS.pdf') }}" target="_blank">
@@ -214,9 +146,10 @@
         <div class="caption">Sasquatch Stool</div>
     </td>
     <td class="image-cell">
-      <a href="{{ url_for('static', filename='') }}" target="_blank">
-        <img src="{{ url_for('static', filename='') }}" alt="Image 2">
+      <a href="{{ url_for('static', filename='images/MP-02-Prints R1243A.pdf') }}" target="_blank">
+        <img src="{{ url_for('static', filename='images/MFGPort02.jpg') }}" alt="Image 1">
       </a>
+         <div class="caption">Toolio - R1243a Refrigerant Canister Holder</div>
     </td>
   </tr>
 
